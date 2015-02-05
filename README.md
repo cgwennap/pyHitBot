@@ -1,6 +1,6 @@
 # pyHitBot
 
-This is a simple python template for programming a bot to read and interact with the hitbox chat interface. The goal of this program is to support the hitbox community and get programmers past the specifics of the hitbox websocket protocol and programming actual functionality for a bot.
+This is a simple python template for programming a bot to read and interact with the hitbox.tv chat interface. The goal of this program is to support the hitbox community and get programmers past the specifics of the hitbox websocket protocol and programming actual functionality for a bot.
 
 ## To run
 
@@ -8,7 +8,7 @@ This is a simple python template for programming a bot to read and interact with
 
 2. run "python testsocket.py"
 
-Upon successful connection, the bot should post "BOT IS ONLINE", echo all incoming texts with the preface "BOT -".
+Upon successful connection, the bot should join the correct channel, post "BOT IS ONLINE", and echo all incoming chats from other users with the preface "BOT -".
 
 ## To modify
 
