@@ -53,7 +53,7 @@ join_msg = ("5:::{\"name\":\"message\",\"args\":[{\"method\":\"joinChannel\",\"p
 
 def hitbox_send_message(ws, message):
     ws.send("5:::{\"name\":\"message\",\"args\":[{\"method\":\"chatMsg\",\"params\":{\"channel\":\""
-        +bot['channel']+"\",\"name\":\""+bot['name']+"\",\"nameColor\":\"FA5858\",\"text\":\"BOT - "+message+"\"}}]}")
+        +bot['channel']+"\",\"name\":\""+bot['name']+"\",\"nameColor\":\"FA5858\",\"text\":\""+message+"\"}}]}")
 
 def on_message(ws, message):
     print "message:",message
@@ -64,7 +64,7 @@ def on_message(ws, message):
         print inmessage
         if m2['params']['name'] != bot['name']:
             #PLACE BOT FUNCTIONALITY HERE
-            hitbox_send_message(ws, inmessage)
+            hitbox_send_message(ws, "BOT - " + inmessage)
     if message == "2::":
         ws.send("2::")
 
@@ -79,8 +79,7 @@ def on_open(ws):
     time.sleep(1)
     ws.send(join_msg)
     time.sleep(1)
-    ws.send("5:::{\"name\":\"message\",\"args\":[{\"method\":\"chatMsg\",\"params\":{\"channel\":\""
-        +bot['channel']+"\",\"name\":\""+bot['name']+"\",\"nameColor\":\"58ACFA\",\"text\":\"BOT IS ONLINE\"}}]}")
+    hitbox_send_message(ws, "BOT IS ONLINE")
     # # alternate script, demonstrating a multithreaded approach to ws events.
     # def run(*args):
     #     for i in range(30000):
