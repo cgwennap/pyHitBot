@@ -2,6 +2,10 @@
 
 This is a simple python template for programming a bot to read and interact with the hitbox.tv chat interface. The goal of this program is to support the hitbox community and get programmers past the specifics of the hitbox websocket protocol and programming actual functionality for a bot.
 
+## External Dependencies
+
+To install websocket library, use the command `sudo pip install websocket-client`. Do NOT pip install websocket.
+
 ## To run
 
 1. Change values in botvalues.json to match your bot's username and password, as well as the channel it will be joining.
