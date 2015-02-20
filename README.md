@@ -4,7 +4,7 @@ This is a simple python template for programming a bot to read and interact with
 
 ## External Dependencies
 
-To install websocket library, use the command `sudo pip install websocket-client`. Do NOT pip install websocket.
+To install websocket library, use the command `sudo pip install websocket-client`. Do NOT use pip install websocket, as this is a different library which has name conflicts.
 
 ## To run
 
