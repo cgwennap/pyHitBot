@@ -22,4 +22,4 @@ You may also wish to change the channel joining message, found in "on_join".
 
 Any runtime error will be caught and redirected to the function "on_error", common actions are to "raise error" or "print error" depending on how forgiving the program should be.
 
-Finally, websocket.enableTrace(True) is extremely useful when debugging protocol errors. However, in ordinary circumstances, enableTrace is set to False to clean up its .
+Finally, websocket.enableTrace(True) is extremely useful when debugging protocol errors. However, in ordinary circumstances, enableTrace can be set to False to clean up its output.
